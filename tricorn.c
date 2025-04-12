@@ -27,7 +27,7 @@ static double	tricorn_divergence_test(double x, double y, int max_iter)
 		tmp = real;
 		real = real * real - (imaginary * imaginary) + x;
 		imaginary = -2 * tmp * imaginary + y;
-		if (real * real + imaginary * imaginary > 10)
+		if (fabs(real) + fabs(imaginary) > 10)
 			return (i);
 		i++;
 	}

@@ -18,15 +18,14 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-# define WIDTH 1600
-# define HEIGHT 1400
-# define ZOOM 200
+# define WIDTH 1280
+# define HEIGHT 720
+# define ZOOM 120
 # define UP 65362
 # define DOWN 65364
 # define LEFT 65361
 # define RIGHT 65363
-# define MAX_ITER 100
-
+# define MAX_ITER 60
 # define MANDELBROT 0
 # define JULIA 1
 

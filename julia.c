@@ -29,7 +29,6 @@ static double	julia_divergence(double x, double y, t_vars *v)
 		tmp = x;
 		x = x * x - (y * y) + real;
 		y = 2 * tmp * y + imaginary;
-		// if (fabs(x) + fabs(y) > 10)
 		if (x * x + y * y > 4)
 			return (i);
 		i++;

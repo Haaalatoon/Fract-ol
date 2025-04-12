@@ -28,8 +28,7 @@ void	draw_selected_fractal_bonus(t_vars *v)
 
 int	change_color(t_vars *v)
 {
-	// v->color_scheme += 0x000A141A;
-	v->color_scheme += 0x0011070D;
+	v->color_scheme += 0x00030508;
 	draw_selected_fractal_bonus(v);
 	return (0);
 }

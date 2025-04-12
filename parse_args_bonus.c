@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parse_args_bonus.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hrhilane <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/12 01:55:34 by hrhilane          #+#    #+#             */
+/*   Updated: 2025/04/12 01:55:36 by hrhilane         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "fractol_bonus.h"
 
 static int	parse_two_arg_fract(char **av, t_vars *v)
@@ -13,7 +25,7 @@ static int	parse_two_arg_fract(char **av, t_vars *v)
 	return (0);
 }
 
-void	parse_args_(int ac, char **av, t_vars *v, int error)
+void	parse_args(int ac, char **av, t_vars *v, int error)
 {
 	if (error || ac < 2)
 	{

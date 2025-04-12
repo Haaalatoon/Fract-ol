@@ -33,6 +33,6 @@ int	init_fractol(t_vars *v)
 	v->yoff = HEIGHT / 2;
 	v->zoom = 2;
 	v->max_iter = MAX_ITER;
-	v->color_scheme =  0;
+	v->color_scheme = 0;
 	return (0);
 }

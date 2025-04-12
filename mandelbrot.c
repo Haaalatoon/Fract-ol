@@ -12,7 +12,7 @@
 
 #include "fractol.h"
 
-static double	mandel_divergence(double x, double y, int max_iter)
+static inline double	mandel_divergence(double x, double y, int max_iter)
 {
 	int		i;
 	double	tmp;
@@ -27,8 +27,7 @@ static double	mandel_divergence(double x, double y, int max_iter)
 		tmp = real;
 		real = real * real - (imaginary * imaginary) + x;
 		imaginary = 2 * tmp * imaginary + y;
-		// if (fabs(real) + fabs(imaginary) > 10)
-		if (real * real + imaginary * imaginary > 10)
+		if (real * real + imaginary * imaginary > 4)
 			return (i);
 		i++;
 	}
@@ -54,8 +53,8 @@ void	create_img_mandelbrot(t_vars *v)
 						- v->yoff) / zoom, v->max_iter);
 			color = 0x0;
 			if (iterations > 0)
-				// color = (iterations * 0x00051020) + v->color_scheme;
-				color = (iterations * iterations) * 0x00010204 + v->color_scheme;
+				color = (iterations * iterations) * 0x00010204
+					+ v->color_scheme;
 			draw_pixel(&(v->img), x_pix, y_pix, color);
 		}
 	}
