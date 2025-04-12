@@ -14,14 +14,14 @@
 
 int	mousehook_bonus(int b, int x, int y, t_vars *v)
 {
-	if (4 == b && MAX_ZOOM - 10 > v->zoom)
+	if (b == 4 && MAX_ZOOM - 10 > v->zoom)
 	{
 		v->xoff += (v->xoff - x);
 		v->yoff += (v->yoff - y);
 		v->zoom *= 2;
 		v->max_iter += 5;
 	}
-	else if (5 == b && v->zoom > 1)
+	else if (b == 5 && v->zoom > 1)
 	{
 		v->xoff = (WIDTH / 2) * (v->zoom < 5) + (v->xoff - (v->xoff - x) / 2)
 			* (v->zoom >= 5);
